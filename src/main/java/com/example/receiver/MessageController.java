@@ -26,7 +26,7 @@ public class MessageController {
 
     @RabbitListener(queues = "Kurs")
     public void listenerMessage(Notification notification){
-        System.out.println(notification.getEmail()+ " "+ notification.getTitle()+
-                " "+ notification.getBody());
+        System.out.println("Email: " + notification.getEmail() + " Title: "
+                + notification.getTitle() + " Body: " + notification.getBody());
     }
 }
